@@ -1,0 +1,110 @@
+{
+	// Place your shark workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"New File": {
+		"prefix": "template",
+		"body": [
+			"<template>",
+			"\t<div></div>",
+			"</template>",
+			"",
+			"<script>",
+			"export default {",
+			"\tname: \"${name}\",",
+			"",
+			"\tcomponents: {",
+			"\t",
+			"\t},",
+			"",
+			"\tdata() {",
+			"\t\treturn {",
+			"",
+			"\t\t};",
+			"\t},",
+			"",
+			"\tmethods: {",
+			"",
+			"\t},",
+			"",
+			"\tcreated() {",
+			"",
+			"\t},",
+			"",
+			"\tvalidations: function() {",
+			"\t\treturn {",
+			"",
+			"\t\t};",
+			"\t},",
+			"",
+			"\tcomputed: {",
+			"",
+			"\t}",
+			"",
+			"};",
+			"</script>",
+			"",
+			"<style lang=\"sass\">",
+			"</style>"
+		]
+	},
+	"SInput": {
+		"prefix": "SInput",
+		"body": [
+			"<SInput",
+			"\tv-model=\"form.${name}\"",
+			"\t:placeholder=\"'${placeholder}'\"",
+			"\t:iconName=\"'${iconClassFontAwesome}'\"",
+			"\t:error=\"$$v.form.${name}.$$error\"",
+			"/>"
+		]
+	},
+	"SToggle": {
+		"prefix": "SToggle",
+		"body": [
+			"<SToggle v-model=\"mode\" :options=\"${Options}\" color=\"secondary\" />"
+		]
+	},
+	"SAccordion": {
+		"prefix": "SAccordion",
+		"body": [
+			"<SAccordion>",
+			"\t<template v-slot:title>",
+			"\t\t<div class=\"width-100\">",
+			"\t\t\t<div class=\"float-left\">",
+			"\t\t\t\t<span style=\"text-align:left\">${Heading}</span>",
+			"\t\t\t</div>",
+			"\t\t</div>",
+			"\t</template>",
+			"\t<template v-slot:content>",
+			"\t\t<div>",
+			"\t\t\t<p>This is a test accordion component</p>",
+			"\t\t</div>",
+			"\t</template>",
+			"</SAccordion>"
+		]
+	},
+	"STabs": {
+		"prefix": "STabs",
+		"body": [
+			"<STabs>",
+			"\t<STab name=\"${NameOrLabel}\">",
+			"\t\t<div class=\"p-32\">${Content}</div>",
+			"\t</STab>",
+			"</STabs>",
+		]
+	},
+}
